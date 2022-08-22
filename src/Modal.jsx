@@ -14,10 +14,10 @@ return(
 
 <div className='modal' >
   <div className='modal_main_container' style={{backgroundColor,color}} text ={text} header={header} handleClick={handleClick} >
-  {actions}
-  <h2>{header}</h2>
+ 
+ <div className='header_container'><h2>{header}</h2><button className='close_btn' onClick={handleClick}>X</button></div> 
 <p>{text}</p>
-<button onClick={handleClick}>close</button>
+ {actions}
 </div>
 </div>
 
