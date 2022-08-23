@@ -11,7 +11,7 @@ state = {
  
  isOpenModal:false,
  buttonText:buttons,
-
+closeButton:true,
 backGroundColor:buttons[0].backGroundColor ,
 text:modalDeclarations[0].text,
 header:modalDeclarations[0].header,
@@ -35,7 +35,7 @@ handleClick =(index,className) =>{ this.setState((current)=>{
 render(){
 
 
-const {isOpenModal,buttonText,text,header,backgroundColor,color,actions} = this.state
+const {isOpenModal,text,header,backgroundColor,color,actions,closeButton} = this.state
 
 return(
 
@@ -52,7 +52,7 @@ return(
     
 </div>
 { isOpenModal &&
-<Modal color ={color} backgroundColor ={backgroundColor} actions = {actions} text={text} header={header} handleClick={()=>{this.setState({isOpenModal:false})}}>
+<Modal color ={color} backgroundColor ={backgroundColor} actions = {actions} text={text} header={header} handleClick={()=>{this.setState({isOpenModal:false})}} closeButton={closeButton}>
 
 
 </Modal>
@@ -81,4 +81,3 @@ return(
 
 
 export default App;
-
