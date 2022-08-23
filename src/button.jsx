@@ -4,7 +4,7 @@ class Button extends PureComponent{
 
 
 render(){
- function click(state,props){state({props:true})} 
+
    const {children,handleClick,backgroundColor,} = this.props
 return(
  <>
