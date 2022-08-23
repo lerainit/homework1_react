@@ -46,9 +46,10 @@ return(
 
 
 
-<Button backgroundColor= {buttons[0].backGroundColor} handleClick ={()=>{this.handleClick(0,'action_btn')}}>{buttons[0].text}</Button>
+<Button backgroundColor= {buttons[0].backGroundColor} handleClick ={()=>{this.handleClick(0,'action_btn')}} text = {buttons[0].text}></Button>
     
-<Button backgroundColor= {buttons[1].backGroundColor}  handleClick ={() =>{ this.handleClick(1,'action_btn2')}}>{buttons[1].text}</Button>
+<Button backgroundColor= {buttons[1].backGroundColor}  handleClick ={() =>{ this.handleClick(1,'action_btn2')}} text = {buttons[1].text}></Button>
+    
     
 </div>
 { isOpenModal &&
