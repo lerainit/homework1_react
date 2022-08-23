@@ -7,7 +7,7 @@ import './App.scss';
 class Modal extends PureComponent{
   
     render(){
-  const {actions,text,header,handleClick,backgroundColor,color}  = this.props 
+  const {actions,text,header,handleClick,backgroundColor,color,closeButton}  = this.props 
 
 return(
 <>
@@ -15,7 +15,8 @@ return(
 <div className='modal' >
   <div className='modal_main_container' style={{backgroundColor,color}} text ={text} header={header} handleClick={handleClick} >
  
- <div className='header_container'><h2>{header}</h2><button className='close_btn' onClick={handleClick}>X</button></div> 
+ <div className='header_container'><h2>{header}</h2>
+ { closeButton && <button className='close_btn' onClick={handleClick}>X</button>}</div> 
 <p>{text}</p>
  {actions}
 </div>
